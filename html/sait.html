@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Счетчик штрафов</title>
+</head>
+
+<body>
+    <h1>
+        <center>
+            <font color="green">Расчёт штрафов</font>
+        </center>
+    </h1>
+    <div id="menu-top">
+        <div class="bg-1">
+            <ul>
+                <li><a href="https://mai.ru/aviahackathon/">Посмотреть пазл</a></li>
+                <li><a href="Basa.html"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<body2>
+    <div id="calc-wrap">
+        <form>
+            <div class="someDiv">
+                <h1></h1>
+                <input type="text" class="form-control" id="inp_1" placeholder="Стоимость 1 дня на ТО">
+                <input type="text" class="form-control" id="inp_2" placeholder="Кол-во дней пробывания">
+                <input type="text" class="form-control" id="inp_3" placeholder="Штрафной коэффициент">
+                <input type="text" class="form-control" id="inp_4" plactholder="Введите индекс">
+                <div>
+                    <div id="but">
+                        <h1></h1>
+                        <button onclick="multi()" class="btn btn-primary">Вычислить неустойку</button>
+                        <button onClick="Obr()">Получить неустойку этом компании</button>
+                    </div>
+        </form>
+    </div>
+</body2>
+<style>
+    top-menu {
+        width: 960px;
+        height: 74px;
+    }
+
+    .bg-1 {
+        width: 950px;
+        height: 64px;
+        background: green url(images/m1.png) repeat-x;
+        padding: 0 0 0 10px;
+    }
+
+    .bg-1 ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .bg-1 ul li {
+        float: left;
+        background: url(images/m2.png) no-repeat right center;
+        padding: 0 2px 0 0;
+    }
+
+    .bg-1 ul li a {
+        display: block;
+        height: 40px;
+        padding: 24px 27px 0 27px;
+        color: #ff9c00;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .bg-1 ul li a:hover {
+        color: #fff;
+        background: #ff9c00;
+    }
+
+    .someDiv {
+        margin-bottom: 50px;
+    }
+</style>
+<script>
+    function multi() {
+        var rez = document.getElementById('inp_1').value * document.getElementById('inp_2').value * document.getElementById('inp_3').value;
+        alert(document.getElementById('inp_1').value * document.getElementById('inp_2').value * document.getElementById('inp_3').value);
+    }
+    var pobeda = 1;
+    var Russia = 2;
+    function Obr() {
+        var y = document.getElementById('inp_4').value;
+
+        if (y == "Победа") {
+            var it = 1000;
+            alert(it);
+        }
+        if (y == "Россия") {
+            var it = 1000000;
+            alert(it);
+        }
+    }
+</script>
+
+</html>
