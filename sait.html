@@ -2,104 +2,173 @@
 <html>
 
 <head>
-    <title>Счетчик штрафов</title>
+    <title>Степан Антонович Казеев</title>
+    <meta charset="UTF-8">
 </head>
 
-<body>
-    <h1>
-        <center>
-            <font color="green">Расчёт штрафов</font>
-        </center>
-    </h1>
-    <div id="menu-top">
-        <div class="bg-1">
-            <ul>
-                <li><a href="https://mai.ru/aviahackathon/">Посмотреть пазл</a></li>
-                <li><a href="Basa.html"></a></li>
-            </ul>
-        </div>
+<body style="background-color: #7FFF00">
+
+    <div id="start">
+        <h1><b>
+                <font color="#0000FF">
+                    <center>Степан Антонович Казеев</center>
+                </font>
+            </b>
+        </h1>
     </div>
+
+    <div class="topnav">
+        <a href="#">На карту</a>
+        <a href="#">Викторина</a>
+    </div>
+
+    <div id="tell">
+        <img class="left" src="http://bagra.ru/logos/httpwwwpoamtru.jpg ">
+        <h3>Достигнув материального благополучия и приобретя широкую известность своей предприимчивостью,
+            Казеевы не жалели денег на поддержку народного просвещения. Николай Степанович и Александр Степанович состояли действительными членами Пензенской ученой архивной комиссии. Николай Степанович в 1889 году построил школу, которую содержал до конца своих дней. Немалые средства вложил он и в строительство приходского храма и двухклассной школы. Это подвижничество фабрикантов было отмечено золотыми медалями 
+           «За усердие» и орденами св. Станислава 3-й степени и св. Анны 3-й и 2-й степеней.</h3>
+    </div>
+
 </body>
-<body2>
-    <div id="calc-wrap">
-        <form>
-            <div class="someDiv">
-                <h1></h1>
-                <input type="text" class="form-control" id="inp_1" placeholder="Стоимость 1 дня на ТО">
-                <input type="text" class="form-control" id="inp_2" placeholder="Кол-во дней пробывания">
-                <input type="text" class="form-control" id="inp_3" placeholder="Штрафной коэффициент">
-                <input type="text" class="form-control" id="inp_4" plactholder="Введите индекс">
-                <div>
-                    <div id="but">
-                        <h1></h1>
-                        <button onclick="multi()" class="btn btn-primary">Вычислить неустойку</button>
-                        <button onClick="Obr()">Получить неустойку этом компании</button>
-                    </div>
-        </form>
-    </div>
-</body2>
+
 <style>
-    top-menu {
-        width: 960px;
-        height: 74px;
+    #block1,
+    #space {
+        margin: 0 auto;
+        margin-top: 10px;
     }
 
-    .bg-1 {
-        width: 950px;
-        height: 64px;
-        background: green url(images/m1.png) repeat-x;
-        padding: 0 0 0 10px;
-    }
-
-    .bg-1 ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-
-    .bg-1 ul li {
-        float: left;
-        background: url(images/m2.png) no-repeat right center;
-        padding: 0 2px 0 0;
-    }
-
-    .bg-1 ul li a {
+    #start {
         display: block;
-        height: 40px;
-        padding: 24px 27px 0 27px;
-        color: #ff9c00;
+        background-color: #FFFF00;
+        border: 8px double#0000FF;
+        border-radius: 5px;
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    #img {
+        margin-left: 100px;
+        margin-top: 100px;
+    }
+
+    #tell {
+        display: block;
+        background-color: #FFFF00;
+        border: 6px double#0000FF;
+        border-radius: 5px;
+        width: 800px;
+        height: 500px;
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+
+    h1,
+    h2,
+    h4 {
+        color: #0000FF;
+    }
+    h3{
+        margin-left: 10px;
+        color:  #0000FF;
+    }
+
+    #word {
+        color: blue;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #FFFF00;
+        width: 200px;
+        border: 7px double blue;
+        color: blue;
+        border-radius: 7px;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: blue;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
-        text-transform: uppercase;
     }
 
-    .bg-1 ul li a:hover {
-        color: #fff;
-        background: #ff9c00;
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
     }
 
-    .someDiv {
-        margin-bottom: 50px;
+
+    #block1 {
+        width: 650px;
+        height: 170px;
+        color: #0000;
+        background: white;
+        border: 3px #CCCCCC solid;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -khtml-border-radius: 10px;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .arrow {
+        position: relative;
+    }
+
+    .arrow:before {
+        content: '';
+        position: absolute;
+        height: 90%;
+        width: 3px;
+        background: #000;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .arrow:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #000 transparent transparent transparent;
+    }
+
+    #n {
+        display: block;
+        background-color: #FFFF00;
+        border: 6px double#0000FF;
+        border-radius: 5px;
+        width: 400px;
+        height: 150px;
+        margin-left: 100px;
+        margin-top: 50px;
+        color: red;
+        font-size: 18pt;
+    }
+
+   
+
+    .nom {
+        width: 160px;
+        height: 40px;
+        color: #2C75FF;
+        background-color: #FFD700;
+        border-radius: 7px;
+        border: 6px double#2C75FF;
     }
 </style>
-<script>
-    function multi() {
-        var rez = document.getElementById('inp_1').value * document.getElementById('inp_2').value * document.getElementById('inp_3').value;
-        alert(document.getElementById('inp_1').value * document.getElementById('inp_2').value * document.getElementById('inp_3').value);
-    }
-    var pobeda = 1;
-    var Russia = 2;
-    function Obr() {
-        var y = document.getElementById('inp_4').value;
-
-        if (y == "Победа") {
-            var it = 1000;
-            alert(it);
-        }
-        if (y == "Россия") {
-            var it = 1000000;
-            alert(it);
-        }
-    }
-</script>
 
 </html>
+
+
